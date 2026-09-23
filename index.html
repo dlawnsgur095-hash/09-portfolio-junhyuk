@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>준혁의 Coding Lab</title>
+  <style>
+    /* 기본 리셋 및 네이비 배경 설정 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #0b1120; /* 딥 네이비 */
+      color: #e2e8f0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* 헤더 영역 */
+    header {
+      text-align: center;
+      padding: 4rem 1rem;
+      background: linear-gradient(135deg, #1e1b4b, #172554); /* 보라-네이비 그라데이션 */
+      border-bottom: 4px solid #8b5cf6; /* 보라색 포인트 라인 */
+    }
+    h1 {
+      color: #c4b5fd; /* 연한 보라색 */
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .intro {
+      font-size: 1.1rem;
+      color: #94a3b8;
+    }
+
+    /* 작품 카드 컨테이너 (반응형 그리드) */
+    .projects-grid {
+      display: grid;
+      /* 모바일에서는 1열, 공간이 넓어지면 다열로 자동 배치 */
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      padding: 3rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* 개별 카드 디자인 */
+    .card {
+      background-color: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #8b5cf6;
+      box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.2);
+    }
+    .card h2 {
+      color: #fff;
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .card p {
+      color: #cbd5e1;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    /* 기술 태그 */
+    .tags {
+      margin-bottom: 1.5rem;
+    }
+    .tags span {
+      display: inline-block;
+      background-color: #4c1d95; /* 어두운 보라 */
+      color: #e9d5ff;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      margin-right: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    /* 실행 버튼 */
+    .btn {
+      display: block;
+      text-align: center;
+      background-color: #8b5cf6; /* 메인 보라 포인트 */
+      color: white;
+      text-decoration: none;
+      padding: 0.75rem;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.2s;
+    }
+    .btn:hover {
+      background-color: #7c3aed;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>준혁의 Coding Lab 👨‍💻</h1>
+    <p class="intro">코딩동아리 기장의 좌충우돌 웹 개발 기록 및 포트폴리오</p>
+  </header>
+
+  <main>
+    <div class="projects-grid" id="projects-container">
+      <!-- script.js에서 데이터가 이곳에 렌더링 돼 -->
+    </div>
+  </main>
+
+  <!-- 데이터 및 렌더링 스크립트 연결 -->
+  <script src="script.js"></script>
+</body>
+</html>
+
